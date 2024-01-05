@@ -1,0 +1,29 @@
+#!/bin/bash
+
+NAME=chrysus
+DIR=/Users/shivamsinghal/Desktop/projects/personal/aura
+USER=shivamsinghal
+GROUP=staff
+WORKERS=4
+WORKER_CLASS=uvicorn.workers.UvicornWorker
+VENV=$DIR/.venv/bin/activate
+#BIND=unix:$DIR/run/gunicorn.sock
+BIND="127.0.0.1:8000"
+LOG_LEVEL=info
+LOG_FILE=$DIR/server.log
+LOG_CONFIG=$DIR/logconfig.ini
+
+cd $DIR
+source $VENV
+
+exec gunicorn src.main:app \
+  --name $NAME \
+  --workers $WORKERS \
+  --worker-class $WORKER_CLASS \
+  --user=$USER \
+  --group=$GROUP \
+  --bind=$BIND \
+  --log-level=$LOG_LEVEL \
+  --log-file=$LOG_FILE \
+  --access-logfile=$LOG_FILE \
+  --log-config=$LOG_CONFIG  # Specify the path to the converted logging configuration file

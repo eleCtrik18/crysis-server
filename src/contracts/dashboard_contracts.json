@@ -1,0 +1,143 @@
+{
+  "priorityList": [
+    "coldUserCard",
+    "quickInvestSection",
+    "liveBuyPrice",
+    "featureCards",
+    "showSaveDailySection",
+    "securitySection",
+    "genericSection1",
+    "goldMineSection",
+    "offersSection",
+    "trustedPartners",
+    "genericSection2",
+    "footer"
+  ],
+  "coldUserCard": {
+    "hidden": false,
+    "title": "Buy Gold, etc..",
+    "subtitle": "Something",
+    "description": "Something",
+    "cta": "/buy",
+    "image": "cdn_link_to_image",
+    "ctaText": "buy now",
+    "showTag": true,
+    "showFooter": true
+  },
+  "quickInvestSection": {
+    "hidden": false,
+    "title": "Buy Gold, etc..",
+    "options": [10, 20, 30]
+  },
+  "liveBuyPrice": {
+    "hidden": false,
+    "image": "cdn_link_to_image"
+  },
+  "featureCards": {
+    "hidden": false,
+    "cards": [
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 0
+      },
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 1
+      },
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 2
+      }
+    ]
+  },
+  "showSaveDailySection": false,
+
+  "securitySection": {
+    "hidden": false,
+    "cards": [
+      {
+        "image": "cdn_link_to_image",
+        "title": "Buy Gold, etc..",
+        "subtitle": ""
+      },
+      {
+        "image": "cdn_link_to_image",
+        "title": "Buy Gold, etc..",
+        "subtitle": ""
+      },
+      {
+        "image": "cdn_link_to_image",
+        "title": "Buy Gold, etc..",
+        "subtitle": ""
+      }
+    ]
+  },
+  "genericSection1": {
+    "hidden": false,
+    "title": "Something",
+    "subtitle": "Something",
+    "description": null,
+    "cta": "/buy",
+    "image": "cdn_link_to_image",
+    "ctaText": "buy now"
+  },
+  "goldMineSection": {
+    "hidden": false,
+    "interestRate": "14%"
+  },
+  "offersSection": {
+    "hidden": false,
+    "cards": [
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 0
+      },
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 1
+      },
+      {
+        "image": "cdn_link_to_image",
+        "cta": "/buy",
+        "ctaText": "Buy Now",
+        "index": 2
+      }
+    ]
+  },
+  "trustedPartners": {
+    "hidden": false,
+    "cards": [
+      ["image1", 0],
+      ["image2", 1],
+      ["image3", 3]
+    ]
+  },
+  "genericSection2": {
+    "hidden": false,
+    "title": "Something",
+    "subtitle": "Something",
+    "description": null,
+    "cta": "/buy",
+    "image": "cdn_link_to_image",
+    "ctaText": "buy now"
+  },
+  "footer": {
+    "hidden": false,
+    "title": "Something",
+    "subtitle": "Something",
+    "description": null,
+    "cta": "/buy",
+    "image": "cdn_link_to_image",
+    "ctaText": "buy now"
+  }
+}

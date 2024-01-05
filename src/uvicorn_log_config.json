@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "disable_existing_loggers": true,
+  "formatters": {
+    "uvicorn": {
+      "format": "%(asctime)s | %(levelname)s | %(name)s - %(message)s",
+      "class": "logging.Formatter"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "formatter": "uvicorn"
+    },
+    "file": {
+      "class": "logging.FileHandler",
+      "filename": "server.log",
+      "formatter": "uvicorn"
+    }
+  },
+
+  "uvicorn.info": {
+    "handlers": ["console", "file"],
+    "level": "INFO"
+  }
+}

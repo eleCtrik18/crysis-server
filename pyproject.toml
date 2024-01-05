@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "aura"
+version = "0.1.0"
+description = "One stop shop for all your gold needs."
+authors = ["Shivam Singhal <shivam.singhal212@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.99.1"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+python-dotenv = "^1.0.0"
+alembic = "^1.11.1"
+requests = "^2.31.0"
+apscheduler = "^3.10.1"
+gunicorn = "^20.1.0"
+redis = "^4.6.0"
+python-jose = "^3.3.0"
+jinja2 = "^3.1.2"
+weasyprint = "^59.0"
+pytz = "^2023.3"
+boto3 = "^1.28.19"
+psycopg2-binary = "^2.9.7"
+pycryptodome = "^3.18.0"
+pycryptodomex = "^3.18.0"
+sqlalchemy-json = "^0.6.0"
+loguru = "^0.7.0"
+celery = {extras = ["redis"], version = "^5.3.4"}
+flower = "^2.0.1"
+newrelic = "^9.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

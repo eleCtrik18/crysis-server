@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+   
+    <title>Aura - Invoice</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+       
+        color: #333;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .w600 {
+        font-weight: 600;
+      }
+      .w500 {
+        font-weight: 500;
+      }
+      .header__container {
+        background: linear-gradient(45deg, #300c7e 0%, #724df2 85.22%);
+        padding: 4rem 2.4rem;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-bottom: 2.4rem;
+      }
+      .invoice {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .userInfo h1 {
+        font-size: 2rem;
+      }
+      .userInfo p {
+        font-size: 1.2rem;
+      }
+
+      .header__container-right {
+        text-align: right;
+      }
+      .address {
+        margin-bottom: 2.4rem;
+      }
+      main {
+        padding: 2.4rem;
+        background-color: #f1f0f5;
+        height: 100%;
+      }
+
+      .transaction__container {
+        margin-top: 2.4rem;
+      }
+      .transactions {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+      .transaction__details {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+      }
+      footer {
+        margin-top: 15.4rem;
+      }
+      footer p {
+        font-size: 1.2rem;
+        color: #4f4f4f;
+      }
+      .footer__container-right > p:first-child {
+        color: #333;
+      }
+      .footer__container-right {
+        text-align: right;
+      }
+      .table-col {
+        padding: 1.6rem;
+      }
+      .table-body {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header__container">
+      <div class="header__container-left">
+        <div class="logo" style="width: 88px;">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100px"  version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 16791 6996"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <style type="text/css">
+              <![CDATA[
+                .fil3 {fill:#FDE404}
+                .fil1 {fill:#FEFEFE;fill-rule:nonzero}
+                .fil0 {fill:#F7AB05;fill-rule:nonzero}
+                .fil2 {fill:url(#id0);fill-rule:nonzero}
+              ]]>
+              </style>
+              <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="13183" y1="2371.04" x2="14531.3" y2="1022.83">
+              <stop offset="0" style="stop-opacity:1; stop-color:#F7AB05"/>
+              <stop offset="1" style="stop-opacity:1; stop-color:#DDB104"/>
+              </linearGradient>
+            </defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer"/>
+              <g id="_344105872">
+              <g>
+                <path class="fil0" d="M10607 6861l0 -364 -376 0 0 132 226 0 0 164c-27,20 -59,35 -95,48 -37,12 -76,18 -119,18 -45,0 -86,-8 -123,-24 -36,-16 -68,-37 -94,-65 -27,-28 -47,-61 -62,-99 -14,-38 -21,-79 -21,-124 0,-42 7,-82 22,-119 15,-38 35,-70 61,-98 25,-28 56,-51 90,-67 35,-16 73,-24 114,-24 27,0 53,2 76,7 23,4 44,11 64,18 19,8 38,18 55,30 18,11 35,24 52,38l99 -115c-23,-19 -46,-36 -70,-50 -24,-15 -50,-27 -77,-37 -27,-10 -56,-18 -88,-23 -31,-5 -66,-8 -105,-8 -67,0 -128,12 -184,36 -56,24 -104,56 -145,97 -40,41 -71,89 -94,143 -22,55 -33,113 -33,174 0,63 11,123 33,177 22,55 53,102 93,142 40,40 88,71 144,94 57,23 119,34 188,34 39,0 76,-3 112,-10 35,-7 68,-17 99,-29 30,-13 59,-27 86,-44 26,-16 50,-34 72,-52zm1088 -315c0,-61 -12,-119 -34,-173 -23,-55 -55,-102 -95,-143 -41,-40 -89,-72 -145,-96 -57,-23 -119,-35 -187,-35 -68,0 -131,12 -187,36 -57,24 -105,56 -147,97 -41,41 -73,89 -96,143 -22,55 -34,113 -34,174 0,61 12,119 34,173 23,55 55,102 95,143 40,40 89,72 145,96 57,23 119,35 187,35 68,0 131,-12 187,-36 57,-24 105,-56 147,-97 41,-41 73,-89 96,-143 22,-55 34,-112 34,-174zm-163 3c0,42 -8,82 -22,119 -15,38 -35,71 -62,98 -26,28 -57,50 -94,66 -36,16 -76,24 -120,24 -44,0 -84,-8 -122,-25 -37,-16 -68,-38 -95,-67 -26,-28 -47,-60 -62,-98 -15,-38 -22,-77 -22,-120 0,-42 7,-82 22,-119 15,-38 35,-70 61,-98 27,-28 58,-50 95,-66 36,-16 76,-24 120,-24 44,0 84,8 121,25 38,16 69,39 96,67 26,28 47,61 62,98 14,38 22,78 22,120zm351 432l619 0 0 -137 -465 0 0 -730 -154 0 0 867zm1581 -435c0,-61 -11,-118 -34,-171 -22,-52 -55,-98 -96,-137 -42,-39 -92,-69 -149,-91 -58,-22 -121,-33 -191,-33l-329 0 0 867 329 0c70,0 133,-11 191,-33 57,-22 107,-53 149,-92 41,-39 74,-85 96,-138 23,-53 34,-110 34,-172zm-163 3c0,43 -7,83 -22,119 -14,36 -35,67 -62,93 -26,26 -59,46 -97,61 -38,15 -80,22 -126,22l-175 0 0 -593 175 0c46,0 88,8 126,23 38,15 71,35 97,62 27,27 48,58 62,94 15,36 22,76 22,119z"/>
+                <g>
+                <path class="fil1" d="M1849 2070c511,0 973,203 1308,532 305,299 504,702 536,1151l5 0 0 131 0 1810 -477 0 0 -593c-21,22 -42,44 -64,66 -335,328 -797,531 -1308,531 -510,0 -973,-203 -1307,-531 -335,-328 -542,-782 -542,-1283 0,-501 207,-954 542,-1282 334,-329 797,-532 1307,-532zm5809 2044l0 0 0 44 0 0c-12,484 -216,920 -541,1239 -335,328 -797,531 -1308,531 -510,0 -973,-203 -1307,-531 -327,-321 -532,-761 -541,-1248l-1 0 0 -35 0 -361 478 0 0 361c0,372 153,708 401,952 248,243 591,394 970,394 379,0 722,-151 970,-394 248,-244 402,-580 402,-952l0 0 0 -1580 477 0 0 1580zm740 -1212c21,-23 42,-45 64,-66 335,-329 797,-532 1307,-532l0 0 0 469 0 0c-378,0 -721,150 -970,394 -248,243 -401,580 -401,951l0 0 0 1580 -478 0 0 -3164 478 0 0 368zm5067 846l0 132 0 1810 -478 0 0 -594c-21,23 -42,45 -64,67 -335,328 -797,531 -1308,531 -510,0 -972,-203 -1307,-531 -335,-329 -542,-782 -542,-1283 0,-501 207,-954 542,-1283 335,-328 797,-531 1307,-531 511,0 973,203 1308,531 305,300 504,703 537,1151l5 0zm-880 -820c-248,-243 -591,-394 -970,-394 -378,0 -721,151 -970,394 -248,244 -401,580 -401,952 0,372 153,708 401,952 249,243 592,394 970,394 379,0 722,-151 970,-394 249,-244 402,-580 402,-952 0,-372 -153,-708 -402,-952zm-9766 5c-248,-244 -591,-394 -970,-394 -379,0 -722,150 -970,394 -248,243 -402,580 -402,951 0,372 154,708 402,952 248,243 591,394 970,394 379,0 722,-151 970,-394 248,-244 402,-580 402,-952 0,-371 -154,-708 -402,-951z"/>
+                <path class="fil1" d="M1849 2070c511,0 973,203 1308,532 305,299 504,702 536,1151l5 0 0 131 0 1810 -477 0 0 -593c-21,22 -42,44 -64,66 -335,328 -797,531 -1308,531 -510,0 -973,-203 -1307,-531 -335,-328 -542,-782 -542,-1283 0,-501 207,-954 542,-1282 334,-329 797,-532 1307,-532zm5809 2044l0 0 0 44 0 0c-12,484 -216,920 -541,1239 -335,328 -797,531 -1308,531 -510,0 -973,-203 -1307,-531 -327,-321 -532,-761 -541,-1248l-1 0 0 -35 0 -1575 478 0 0 1575c0,372 153,708 401,952 248,243 591,394 970,394 379,0 722,-151 970,-394 248,-244 402,-580 402,-952l0 0 0 -1580 477 0 0 1580zm740 -1212c21,-23 42,-45 64,-66 335,-329 797,-532 1307,-532l0 0 0 469 0 0c-378,0 -721,150 -970,394 -248,243 -401,580 -401,951l0 0 0 1580 -478 0 0 -3164 478 0 0 368zm5067 1248l0 1540 -478 0 0 -594c-21,23 -42,45 -64,67 -335,328 -797,531 -1308,531 -510,0 -972,-203 -1307,-531 -335,-329 -542,-782 -542,-1283 0,-501 207,-954 542,-1283 270,-265 624,-449 1020,-509l0 476c-264,55 -499,184 -683,364 -248,244 -401,580 -401,952 0,372 153,708 401,952 249,243 592,394 970,394 379,0 722,-151 970,-394 187,-183 320,-419 375,-682l505 0zm-10646 -1217c-248,-244 -591,-394 -970,-394 -379,0 -722,150 -970,394 -248,243 -402,580 -402,951 0,372 154,708 402,952 248,243 591,394 970,394 379,0 722,-151 970,-394 248,-244 402,-580 402,-952 0,-371 -154,-708 -402,-951z"/>
+                </g>
+                <g>
+                <path class="fil2" d="M13911 2480c92,-166 207,-318 342,-450 134,-132 288,-245 457,-334l0 0c267,146 555,227 821,234l0 1c-367,28 -697,186 -944,427 -270,266 -438,632 -440,1035l-472 1 0 -3 0 -1c-2,-402 -170,-767 -440,-1032 -270,-265 -642,-429 -1052,-432l0 -462c410,-3 782,-168 1052,-433 270,-265 438,-629 440,-1031l0 0c3,277 237,912 236,910 -91,166 -207,317 -342,450 -134,132 -289,245 -458,335 169,89 324,203 458,335 135,132 251,284 342,450z"/>
+                <path class="fil3" d="M13911 910c167,301 409,542 678,714 0,1 1,1 1,1 39,24 80,48 122,70 -1,0 -2,0 -2,1 267,146 555,228 821,235 35,-3 71,-5 108,-5l1 -462 -1 0c-410,-3 -781,-168 -1052,-433 -270,-265 -438,-629 -440,-1031l-472 0c3,344 92,649 236,910z"/>
+                </g>
+              </g>
+              <path class="fil1" d="M16075 1927l0 -408 -152 0 0 -54 365 0 0 54 -152 0 0 408 -61 0zm275 0l0 -462 92 0 109 327c10,30 18,53 22,68 5,-17 14,-42 25,-74l111 -321 82 0 0 462 -59 0 0 -387 -135 387 -55 0 -133 -394 0 394 -59 0z"/>
+              </g>
+            </g>
+            </svg>
+
+          <!-- <img
+            src="http://localhost:8000/static/Aura_TM.png"
+            alt="Company logo"
+            style="width: 88px"
+          /> -->
+        </div>
+        <div class="userInvoice__info">
+          <h1>Tax Invoice<span class="w600"></span></h1>
+          <div class="userInfo" style="margin-top: 10px">
+            <h2>{{ user_name }}</h2>
+            <p>Date: {{ date }}</p>
+            <p>Customer ID: {{ user_id }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="header__container-right">
+        <div class="address">
+          <p>
+            Moi Technology Private Limited<br />85D, Subbiahpuram main, 3rd
+            street<br />Thoothukkudi, Tamilnadu - 628003
+          </p>
+        </div>
+        <div class="helpDetails">
+          <p>GSTIN: 33AAPCM8850L1ZT</p>
+          <p>PAN: AAPCM8850L</p>
+          <p>CIN: U74999TN2022PTC153068</p>
+          <p>
+            Need Help? email us at
+            <span class="underline">support@auragold.in</span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <table style="width: 100%; display: table; border-collapse: collapse;">
+          <thead style="text-align: left; background: #dddddd">
+            <tr>
+              <th class="table-col"><p class="w500">Description</p></th>
+              <th class="table-col"><p class="w500">Quantity(grams)</p></th>
+              <th class="table-col"><p class="w500">Rate/gm(₹)</p></th>
+              <th class="table-col"><p class="w500">Amount(₹)</p></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background-color: white; border-bottom: 1px dashed black;">
+              <td class="table-col"><p>24K Gold {{ hsn }}</p></td>
+              <td class="table-col">
+                <p>{{qty}}</p>
+              </td>
+              </td>
+              <td class="table-col"><p>{{price}}</p></td>
+              <td class="table-col"><p>{{amount_wo_gst}}</p></td>
+            </tr>
+            <!-- <tr style="background-color: white;">
+              <td class="table-col"><p>CGST(1.5%)</p></td>
+              <td class="table-col"></td>
+              <td class="table-col"></td>
+              <td class="table-col"><p>{{cgst}}</p></td>
+            </tr> -->
+            <tr style="background-color: white; border-bottom: 1px dashed black;">
+              <td class="table-col"><p>GST(3%)</p></td>
+              <td class="table-col"></td>
+              <td class="table-col"></td>
+              <td class="table-col"><p>{{gst}}</p></td>
+            </tr>
+            <tr style="background-color: white; border-bottom: 1px dashed black;">
+              <td class="table-col"><p>TOTAL INVOICE VALUE</p></td>
+              <td class="table-col"></td>
+              <td class="table-col"></td>
+              <td class="table-col"><p>{{amount_w_gst}}</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="transaction__container">
+        <p class="transactions">Transaction Details</p>
+        <div class="transaction__details">
+          <p>Transaction ID: {{txn_id}}</p>
+          <p class="w500"></p>
+        </div>
+        <div>
+          <p>Payment Mode: {{payment_mode}}</p>
+        </div>
+      </div>
+      <br /><br />
+      <h2>Declaration:</h2>
+
+      <div style="padding: 20px;">
+        <ul>
+          <li>
+            We declare that the above quantity of goods are kept by the seller
+            in a secure vault and the same is insured by the seller. The seller
+            shall be liable to pay the customer the value of the goods in case
+            of any loss or damage to the goods.
+          </li>
+          <li>
+            It can be delivered in a form of a minted coin upon request as per
+            the Terms and Conditions
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <div class="footer__container-left">
+          <!-- <p>Goods once sold will not be returned</p> -->
+          <!-- <p>Any disputes shall be subject to Mumbai jurisdiction</p> -->
+        </div>
+        <div class="footer__container-right">
+          <div class="signature__container">
+            <svg width="66" height="74" viewBox="0 0 66 74" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="66" height="74" fill="url(#pattern0)"/>
+              <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_1_2" transform="matrix(0.00312438 0 0 0.0030073 -0.227502 0.00675676)"/>
+              </pattern>
+              <image id="image0_1_2" width="802" height="333" xlink:href="data:image/png;base64,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"/>
+              </defs>
+              </svg>
+          </div>
+          <p class="w500">Authorised Signatory</p>
+          <p>Moi Technology Private Limited.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
