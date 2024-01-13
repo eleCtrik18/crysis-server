@@ -2,6 +2,9 @@ def truncate_to_4_decimal(number: float) -> float:
     multiplier = 10**4
     return int(number * multiplier) / multiplier
 
+def truncate_to_2_decimal(number: float) -> float:
+    multiplier = 10**2
+    return int(number * multiplier) / multiplier
 
 def convert_amout_to_string(amount: float):
     formatted_number = "{:.2f}".format(amount)
@@ -24,3 +27,5 @@ def format_amt(amt: float, to_string: bool = False):
     if to_string:
         return convert_amout_to_string(amt)
     return amt
+
+

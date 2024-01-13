@@ -15,9 +15,14 @@ def get_wallet(
     db: Session = Depends(get_db),
     current_user=Depends(get_current_user),
 ):
-    wallet = WalletService(db, current_user).get_wallet()
-    if wallet.success:
+    wallet_service = WalletService(db, current_user)
+    combined_response = wallet_service.get_wallet_with_conversion()
+
+    print(combined_response)
+
+    if combined_response.success:
         response.status_code = status.HTTP_200_OK
     else:
         response.status_code = status.HTTP_400_BAD_REQUEST
-    return wallet
+
+    return combined_response
