@@ -1,3 +1,5 @@
+from sqlalchemy import func
+from src.models.transaction import Transaction
 from src.models.wallet import Wallet
 from src.utils.mathutils import truncate_to_4_decimal
 
@@ -24,3 +26,19 @@ class WalletRepository:
         if not WalletObj:
             raise Exception("User Wallet not found")
         return {"quantity": truncate_to_4_decimal(WalletObj.qty_g)}
+    
+    def get_total_invested_value_for_user(self, user_id: str) -> float:
+        try:
+            total_value = (
+                self.db.query(func.sum(Transaction.total_value_rs))
+                .filter(
+                    Transaction.user_id == user_id,
+                    Transaction.txn_status == 'SUCCESS',
+                    Transaction.txn_type == 'BUY'
+                )
+                .scalar() or 0.0
+            )
+            return total_value
+        except Exception as e:
+            # Handle exceptions (e.g., log or raise)
+            raise

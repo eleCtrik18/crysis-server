@@ -59,34 +59,55 @@ class WalletService:
                 error=str(e)
             )
         
-    def get_wallet_with_conversion(self):
+    def get_total_value_for_user(self):
         try:
-            # Get wallet details
-            wallet_details_response = self.get_wallet()
-
-            # Check if getting wallet details was successful
-            if wallet_details_response.success:
-                conversion_response = self.convert_gold_to_amount()
-
-                # Check if conversion was successful
-                if conversion_response.success:
-    
-                    combined_data = {
-                        "wallet_details": conversion_response.data,
-                    }
-
-                    return APIResponse(
-                        success=True,
-                        message="Combined response",
-                        data=combined_data,
-                    )
-                else:
-                    return conversion_response 
-            else:
-                return wallet_details_response 
+            total_value = WalletRepository(self.db).get_total_invested_value_for_user(self.user_id)
+            return APIResponse(
+                success=True,
+                message="Total value fetched successfully",
+                data={"total_value": total_value},
+            )
         except Exception as e:
             return APIResponse(
                 success=False,
-                message="Something Went Wrong",
+                message="Failed to fetch total value",
                 error=str(e),
-            )    
+            )
+    
+        
+    def get_wallet_with_conversion(self):
+     
+     try:
+        # Get wallet details
+        wallet_details_response = self.get_wallet()
+
+        if not wallet_details_response.success:
+            return wallet_details_response
+
+        total_value_response = self.get_total_value_for_user()
+
+        if not total_value_response.success:
+            return total_value_response
+
+        conversion_response = self.convert_gold_to_amount()
+
+        if not conversion_response.success:
+            return conversion_response
+
+        combined_wallet_data = {
+            "total_invested_value": total_value_response.data["total_value"],
+            "wallet_details": conversion_response.data,
+        }
+
+        return APIResponse(
+            success=True,
+            message="Wallet details fetched successfully",
+            data=combined_wallet_data,
+        )
+
+     except Exception as e:
+        return APIResponse(
+            success=False,
+            message="Something Went Wrong",
+            error=str(e),
+        )  
